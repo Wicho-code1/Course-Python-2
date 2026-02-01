@@ -1,0 +1,67 @@
+#01_loop_white.py
+
+# 01 - bucles (while)
+#Permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición
+
+print("Bucle while:")
+
+contador = 0
+while contador <= 5:
+    print(contador)
+    contador += 1 #es super importante para evitar un bucle infinito
+    
+
+print(">Bucle while con break:")
+# puede funcionar cuando existe un valor y no se conoce cuantas veces se corre el ciclo
+contador_2 = 0
+while True:
+    print(contador_2)
+    contador_2 += 1
+    if contador_2 == 6:
+        break #sale del bucle
+
+#Ej 2
+print("\n Bucle contador_3")
+
+contador_3 = 0
+while contador_3 <= 100:
+    contador_3 += 1
+    print(contador_3)
+    if contador_3 % 5 ==0:
+        print("El número es multiplo de 5")
+        break
+
+
+#continue, que lo hace es saltar esa iteración en concreto
+# y continuar con el bucle
+print("\n Bucle con continue")
+
+contador = 0
+while contador < 10:
+    contador += 1
+    if contador % 2 == 0:
+        continue    #repite el bucle desde el inicio
+    
+    print(contador)
+    
+    
+# else, esta condición cuando se ejecuta?
+print("\n Bucle while con else:")
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+else:
+    print("El bucle ha terminado") # sirve para anunciar que el bucle ha terminado y que se cumplieron todas las condiciones del While, se ejecuta al final del bucle
+    
+    # pedirle al usuario un número que tiene que ser positivo si no, no lo 
+
+numero = -1
+while numero < 0:
+    try:
+        numero = int(input("Escribe un número positivo: *"))
+        if numero < 0:
+            print("El número debe ser positivo. Intenta otra vez")
+    except:
+        print("Lo que introduces debe ser un número, que si no peta")
+print(f"El número que has introducido es {numero}")
