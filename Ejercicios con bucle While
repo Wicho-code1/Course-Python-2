@@ -1,0 +1,75 @@
+# Ejercicios
+
+# Ejercicio 1: cuenta atras
+#imprime los números del 10 al 1 usando un bucle while
+
+print("\nEjercicio 1:")
+
+contador = 10
+
+while contador > 0:
+    print(contador)
+    contador -= 1
+    
+# Ejercicio 2: suma los números pares (while)
+# calcula la suma de los números pares entre 1 y 20 (inclusive) usando un bucle while
+
+print("\nEjercicio 2:")
+
+contador = 1
+suma_pares = 0
+
+while contador <= 20:
+    if contador % 2 == 0:
+        suma_pares += contador
+    contador += 1
+print("La suma de los números pares es: ",suma_pares)
+
+
+#Ejercicio 3: Factorial de un número
+#pide al usuario que introduzca un número entero positivo
+#Calcula su factorial usando un bucle while.
+#el factorial de un número positivo es el producto de todos los números del 1 a ese número.
+# Por ejemplo, el factorial de 5
+#5! = 5 x 4 x 3 x 2 x 1 = 120
+
+print("\nEjercicio 3")
+
+factorial = 1
+numero = int(input("Escribe un número positivo: "))
+
+while numero > 0:
+    factorial = factorial * numero
+    numero -= 1
+print(factorial)
+
+# Ejercicio 4: Validación de contraseña
+# Pide al usuario que introduzca una contraseña.
+# La contraseña debe tener al menos 8 caracteres.
+# Usa un bucle while para seguir pidiendo la contraseña hasta que cumpla con los requisitos.
+# Si la contraseña es válida, imprime "Contraseña válida".
+
+print("\nEjercicio 4:")
+
+contraseña = ""
+
+while len(contraseña) < 8:
+    contraseña = input("\nEscribe una contraseña de 8 dígitos: ")
+    if len(contraseña) < 8:
+        print("La contraseña debe tener al menos 8 caracteres. Inténtalo de nuevo.")
+print("Contraseña válida")
+
+#Ejercicio 5
+#tabla de multiplicar
+#pide al usuario que introduzca un número.
+#imprime la tabla de multiplicar de ese número
+
+print("\n Ejercicio 5\n tabla de multiplicar")
+
+numero = 1
+var_multi = int(input("\nEscribe un número: "))
+   
+while numero < 11:
+    tabla = var_multi * numero
+    print(f"{var_multi} x {numero} = ",tabla)
+    numero += 1
