@@ -1,0 +1,63 @@
+# 02 - bucles (for)
+# permiten ejecutar un bloque de código repetidamente mientras INTER un iterable o una lista
+
+print("\nBucle for: ")
+
+#interar una lista
+
+frutas = ["manzana", "pera", "mandarina"]
+for fruta in frutas:
+    print(fruta)
+
+# iterar sobre cualquier cosa que sea iterable
+cadena = "luis"
+for caracter in cadena:
+    print(caracter)
+    
+Nombre = "WICHO"
+for caract in Nombre:
+    print(caract)
+
+# enumerate ()
+frutas = ["manzana", "pera", "mandarina"]
+for index, fruta in enumerate(frutas):
+    print(f"El índice es {index} y la fruta es {fruta}")
+    
+    frutas = ["Azul", "rojo", "amarillo"]
+for idx, values in enumerate(frutas):
+    print(f"El índice es {idx} y la fruta es {values}")
+    
+# bucles anidados
+letras = ["A", "B", "C"]
+numeros = [1, 2, 3]
+
+for l in letras:
+    for nu in numeros:
+        print(f"{l}{nu}")
+
+#break
+print("\n break: ")
+animales = ["perro", "gato", "raton", "loro", "pez", "canario"]
+for idx, animal in enumerate(animales):
+    print(animal)
+    if animal == "loro":
+        print(f"El loro está escondido en el indice {idx}")
+        break
+#continue
+print("\nContinue")
+
+animales = ["perro", "gato", "raton", "loro", "pez", "canario"]
+for animal in animales:
+    if animal == "loro":
+        continue
+    print(animal)
+    
+# comprensión de listas (list comprenhension)
+
+animales = ["perro", "gato", "raton", "loro", "pez", "canario"]
+animales_mayus = [animal.upper() for animal in animales]
+print(animales_mayus)
+
+# muestra los números pares de una lista
+pares = [num for num in [1, 2, 3, 4, 5, 6] if num % 2 == 0]
+print(pares)
