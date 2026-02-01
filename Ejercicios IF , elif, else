@@ -1,0 +1,53 @@
+
+#Ejercicio 1: Determinar el mayor de dos números
+#pide al usuario que introduzca dos números y muestra un mensaje indicando cual es mayor o si son iguales
+
+print("\nEjercicio 1")
+
+numero_1 = input("Introduce el primer número\n")
+numero_2 = input("Introduce el segundo número\n")
+
+if numero_1 == numero_2:
+    print("Son número iguales")
+elif numero_1 > numero_2:
+    print("El primer número es mayor que el segundo")
+else:
+    print("El segundo número es mayor que el primero")
+    
+#Ejercicio 2: Calculadora simple
+#Pide al usuario dos números y una operación (+, -, *, /)
+#Realiza la operación y muestra el resultado (maneja la divición entre zero)
+
+print("\nEjercicio 2: Calculadora simple")
+
+numero_1 = float(input("Ingresa el primer número\n"))
+numero_2 = float(input("Ingresa el segundo número\n"))
+operacion = input("Ingresa el tipo de operación entre (+, -, *, /) \n")
+if operacion == "+":
+    resultado = numero_1 + numero_2
+elif operacion == "-":
+    resultado = numero_1 - numero_2
+elif operacion == "*":
+    resultado = numero_1 * numero_2
+elif operacion == "/":
+    if numero_2 == 0:
+        print("error: no es un número divisible")
+    else:
+        resultado = numero_1 / numero_2
+else:
+    print("Operación no válida")
+    
+if 'resultado' in locals(): #comprueba si la variable resultado existe
+    print("El resultado es: \n",resultado)
+
+
+# Ejercicio 3: año bisiesto
+#Pide al usuario que introduzca un año y determina si es bisiesto.
+#un año bisiesto si es divisible por 4, excepto si es divible por 100 pero no por 400
+print("\nEjercicio 3:")
+anio = int(input("Introduce un año: "))
+
+if (anio % 4 == 0 and anio % 100 != 0) or anio % 400 == 0:
+    print(f"{anio} es bisiesto.")
+else:
+    print(f"{anio} no es año bisiesto")
