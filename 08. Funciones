@@ -86,3 +86,27 @@ print("\n")
 mostrar_informacion_de(super_name="felixicaza", es_mod=True, gatos=40)
 
 
+#realizar soluciones de ejercicios anteriores con Funciones
+print("\n Ejercicio 5\n tabla de multiplicar")
+print("\nMétodo con For")
+def tabla_multiplicar (digito):   
+    for numero in range(1, 11):
+        tabla = digito * numero
+        print(f"{digito} x {numero} = ",tabla)
+
+tabla_multiplicar(3)
+    
+
+print("\nMetodo con While")
+
+def tabla_multiplicar (digito):   
+    numero = 1
+    while numero < 11:
+        tabla = digito * numero
+        print(f"{digito} x {numero} = ",tabla)
+        numero += 1
+
+tabla_multiplicar(3)
+    
+
+
