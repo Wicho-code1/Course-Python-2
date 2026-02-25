@@ -1,0 +1,33 @@
+
+# 01 - Expresiones regulares
+
+""" Las expresiones regulares son una secuencia de caracteres que forman un patrón de búsqueda.
+    Se utilizan para la búsqueda de cadenas de texto, validación de datos, etc."""
+    
+""" ¿Por qué aprender Regex? 
+
+- Busqueda avanzada: encontrar patrones especificos grandes de forma rápida y precisa. (un editor de )
+
+- Validación de datos: Permitir obtener y aprovechar datos específicos de un texto, como nombres, fechas o direcciones.
+
+- Manipulación del texto: Extraer, reemplazar y modificar partes de la cadena de texto fácilmente
+
+"""
+# 1. Importar el módulo de expresiones regulares "re"
+
+import re
+# 2. Crear un patrón, que es una cadena de texto que describe lo que queremos encontrar
+
+pattern = "Hola"
+
+# 3. El texto donde queremos buscar
+text = "Hola Mundo"
+
+# 4. usar la función de búsqueda de "re"
+
+result = re.search(pattern, text)
+
+if result:
+    print("He encontrado el patrón en el texto")
+else:
+    print("No he encontrado el patrón en el texto")
