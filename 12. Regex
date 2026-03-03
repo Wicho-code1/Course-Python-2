@@ -31,3 +31,41 @@ if result:
     print("He encontrado el patrón en el texto")
 else:
     print("No he encontrado el patrón en el texto")
+
+
+# .group() devuelve la cadena que coincide con el pattern
+print(result.group())
+
+# .start() devolver la posición inicial de la coincidencia
+print(result.start())
+
+# .end() devolver la posición final de la coincidencia
+print(result.end())
+
+# ejercicio 01
+# Encuentra la primer ocurrencia de la palabra "IA" en el siguiente texto
+# e indica en que posición empieza y termina la coincidencia
+print("\nEjercicio 1")
+
+text_1 = "todo el mundo dice que la IA nos va a quitar el trabajo. Pero solo hace falta ver como la puede cagar con las Regex para ir con cuidado"
+
+pattern_1 = "IA"
+
+found_ia = re.search(pattern_1, text_1)
+
+if found_ia:
+    print(f"He encontrado el patrón en el texto en la pisición {found_ia.start()} y termina en la posición {found_ia.end()}")
+else:
+    print("No he encontrado el patrón en el texto")
+    
+## Encontrar todas las coincidencias de un patrón
+# .findall() devuelve una lista con todas las coincidencias
+print("\nEjercicio 2")
+text = "Me gusta Python. Python es lo máximo. aunque Python no es tan dificil, ojo con Python"
+
+pattern = "Python"
+
+matches = re.findall(pattern, text)
+
+print(matches)
+print(len(matches)) # puedes ver cuantas veces aparecía la palabra buscada
